@@ -1,9 +1,14 @@
 {
     "name": "hexlet/code",
+    "description": "five aritmetic games",
     "authors": [
         {
             "name": "ola-9"
         }
     ],
-    "require": {}
+    "require": {},
+    "bin": [
+        "bin/brain-games"
+    ],
+    "license": "MIT"
 }
