@@ -2,35 +2,26 @@
 
 namespace Php\Project\Games\Even;
 
-use function cli\line;
-use function cli\prompt;
+require_once 'src/Engine.php';
 
-const ROUNDS_COUNT = 3;
+use function Php\Project\Engine\run;
+use const Php\Project\Engine\ROUNDS_COUNT;
+
+const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function isEven($number)
 {
     return $number % 2 === 0 ? true : false;
 }
 
-function runGame()
+function runEven()
 {
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name'); // question mark?
-    line("Hello, %s!", $name);
-    line('Answer "yes" if the number is even, otherwise answer "no".');
-
+    $data = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
         $question = rand(1, 100);
-        line("Question: {$question}");
-        $playerAnswer = prompt("Your answer");
         $answer = isEven($question) ? 'yes' : 'no';
-        if ($answer !== $playerAnswer) {
-            line('"%s" is wrong answer ;(. Correct answer was "%s".', $playerAnswer, $answer);
-            line("Let's try again, %s!", $name);
-            return;
-        }
-        line('Correct!');
+        $data[] = [$question, $answer];
     }
-    line("Congratulations, %s!", $name);
+   
+    return run(DESCRIPTION, $data);
 }
-
