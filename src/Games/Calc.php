@@ -2,9 +2,8 @@
 
 namespace Php\Project\Games\Calc;
 
-require_once 'src/Engine.php';
-
 use function Php\Project\Engine\run;
+
 use const Php\Project\Engine\ROUNDS_COUNT;
 
 const DESCRIPTION = 'What is the result of the expression?';
@@ -31,6 +30,5 @@ function runCalc()
         $answer = (string)calculate($num1, $num2, $operation);
         $data[] = [$question, $answer];
     }
-   
     return run(DESCRIPTION, $data);
 }

@@ -2,9 +2,8 @@
 
 namespace Php\Project\Games\Even;
 
-require_once 'src/Engine.php';
-
 use function Php\Project\Engine\run;
+
 use const Php\Project\Engine\ROUNDS_COUNT;
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -22,6 +21,5 @@ function runEven()
         $answer = isEven($question) ? 'yes' : 'no';
         $data[] = [$question, $answer];
     }
-   
     return run(DESCRIPTION, $data);
 }
