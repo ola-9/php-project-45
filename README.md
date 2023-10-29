@@ -3,5 +3,5 @@
 
 
 #### Brain-Even game:
-<script async id="asciicast-zQxUxofiRsZkSTKZ78msFcYSE" src="https://asciinema.org/a/zQxUxofiRsZkSTKZ78msFcYSE.js"></script>
+[![asciicast](https://asciinema.org/a/zQxUxofiRsZkSTKZ78msFcYSE.svg)](https://asciinema.org/a/zQxUxofiRsZkSTKZ78msFcYSE)
 
