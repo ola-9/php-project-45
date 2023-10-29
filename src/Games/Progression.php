@@ -31,7 +31,6 @@ function runProgression()
         $progression[$index] = '..';
         $question = implode(' ', $progression);
         $data[] = [$question, $answer];
-
     }
     return run(DESCRIPTION, $data);
 }
