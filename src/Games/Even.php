@@ -8,7 +8,7 @@ use const Php\Project\Engine\ROUNDS_COUNT;
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function isEven($number)
+function isEven(int $number)
 {
     return $number % 2 === 0 ? true : false;
 }

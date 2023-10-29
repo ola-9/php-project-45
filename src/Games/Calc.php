@@ -8,7 +8,7 @@ use const Php\Project\Engine\ROUNDS_COUNT;
 
 const DESCRIPTION = 'What is the result of the expression?';
 
-function calculate($operand1, $operand2, $operator)
+function calculate(int $operand1, int $operand2, string $operator)
 {
     return match ($operator) {
         '+' => $operand1 + $operand2,
@@ -20,6 +20,7 @@ function calculate($operand1, $operand2, $operator)
 
 function runCalc()
 {
+    $data = [];
     $operators = ['+', '-', '*'];
     for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
         $num1 = rand(1, 10);

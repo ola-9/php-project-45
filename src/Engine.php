@@ -8,7 +8,7 @@ use function cli\prompt;
 const ROUNDS_COUNT = 3;
 
 
-function run($description, $data)
+function run(string $description, array $data): void
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?', '', ' ');
