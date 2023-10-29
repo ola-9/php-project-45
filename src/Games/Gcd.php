@@ -24,7 +24,7 @@ function runGcd()
         $num2 = rand(1, 50);
         $question = "{$num1} {$num2}";
         $answer = (string)calculateGcd($num1, $num2);
-        print_r($answer);
+        $data[] = [$question, $answer];
     }
     return run(DESCRIPTION, $data);
 }
