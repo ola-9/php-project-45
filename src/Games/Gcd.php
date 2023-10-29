@@ -8,7 +8,7 @@ use const Php\Project\Engine\ROUNDS_COUNT;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
-function calculateGcd($number1, $number2)
+function calculateGcd(int $number1, int $number2)
 {
     if ($number2 === 0) {
         return $number1;

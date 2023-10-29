@@ -10,7 +10,7 @@ const DESCRIPTION = 'What number is missing in the progression?';
 
 const PROGRESSION_LENGTH = 10;
 
-function getProgression($step, $start, $length)
+function getProgression(int $step, int $start, int $length)
 {
     $result = [];
     for ($i = 1; $i <= $length; $i += 1) {
